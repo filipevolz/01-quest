@@ -1,0 +1,140 @@
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --max-width-size: 192rem;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-image: url(../images/bg-desktop.svg);
+    background-color: hsl(257, 40%, 49%);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-image: url(../images/bg-mobile.svg);
+        
+    }
+}
+
+main {
+    display: grid; 
+    grid-template-areas: 
+    ". nav . nav ."
+    ". section . section ."
+    ". footer . footer .";
+    grid-template-rows: 12rem auto 12rem;
+
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 9rem;
+}
+
+nav {
+    grid-area: nav;
+    padding-bottom: 5rem;
+}
+
+nav a h1 img {
+    width: 25em;
+}
+
+
+
+section {
+    grid-area: section;
+
+    display: flex;
+    gap: 8rem;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+section img {
+    width: 2500px;
+}
+
+section .register {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10rem;
+}
+
+section .register h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 5.6rem;
+    line-height: 7rem;
+    padding-bottom: 3.5rem;
+}
+
+section .register p {
+    font-size: 2.4rem;
+    padding-bottom: 3rem;
+}
+
+section .register .description {
+    color: #e9e8e8;
+}
+
+section .register a .btn-register {
+    background-color: #fff;
+    height: 6.3rem;
+    width: 23rem;
+    border-radius: 3rem 3rem;
+    text-align: center;
+    padding: 1.1rem;
+}
+
+section .register a .btn-register:hover {
+    background-color: hsl(300, 69%, 71%);
+    color: #fff;
+}
+
+footer {
+    grid-area: footer;
+}
+
+footer .social {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+    padding: 1rem 5rem;
+}
+
+footer .social a i {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 1.5rem;
+    font-size: 1.9rem;
+    color: #fff;
+}
+
+footer .social a i:hover{
+    color: hsl(300, 69%, 71%);
+    border-color: hsl(300, 69%, 71%);
+}
